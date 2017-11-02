@@ -1,1 +1,3 @@
-export default {};
+export default {
+    GET_ALL_TODOS: 'get_all'
+};
