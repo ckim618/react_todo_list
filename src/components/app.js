@@ -1,12 +1,12 @@
 import React from 'react';
-import Cards from './cards';
+import Game from './game';
 import Header from './header';
 
 const App = (props) => (
     <div>
         <div className="app">
             <Header />
-            <Cards />
+            <Game />
         </div>
     </div>
 );

@@ -15,7 +15,6 @@ export default (props) => {
                 <div className="label">Accuracy:</div>
                 <div className="value">{props.accuracy}</div>
             </div>
-            <button className="reset" type="reset">Reset Game</button>
         </section>
     );
 }
