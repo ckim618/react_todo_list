@@ -1,34 +1,117 @@
-@font-face {
-    font-family: blocky;
-    src: url(../fonts/blocky.ttf);
-}
-
 body {
-    margin: 0;
+    background-image: url("http://www.hearthstonetopdecks.com/wp-content/uploads/2017/02/ungoro-wallpaper007.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.app {
-    background-color: #000;
-    color: #fff;
-    font-family: blocky;
-    font-size: 25px;
-    padding: 50px;
+header {
+    width: 100%;
+    height: 30vh;
     text-align: center;
+
+}
+/* Styling for the header of the memory match game */
+
+#logo {
+    width: 100px;
+    height: 100px;
+    float: left;
 }
 
-.app .logo {
-    height: 200px;
+#game_title {
+    font-size: 3em;
+    text-shadow: 4px 4px black;
+    color: ghostwhite;
+    width: 70%;
+    margin: 10px auto;
+
 }
 
-.rotate {
-    animation: spin 10s linear infinite;
+.links {
+    color: ghostwhite;
+    text-shadow: 3px 2px black;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 2%;
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Styling for the stats container */
+
+#stats_container {
+    font-size: x-large;
+    text-shadow: 2px 2px black;
+    color: gold;
+    height: 70vh;
+    width: 20vw;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.value {
+    text-shadow: none;
+    color: #b88603;
+}
+
+.games_played, .attempts, .accuracy {
+    flex: .5;
+}
+
+.reset {
+    flex: .25;
+    color: black;
+    background: #d9b834;
+    background-image: -webkit-linear-gradient(top, #d9b834, #3e6fc2);
+    background-image: -moz-linear-gradient(top, #d9b834, #3e6fc2);
+    background-image: -ms-linear-gradient(top, #d9b834, #3e6fc2);
+    background-image: -o-linear-gradient(top, #d9b834, #3e6fc2);
+    background-image: linear-gradient(to bottom, #d9b834, #3e6fc2);
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+}
+
+button:focus {
+    outline: none;
+}
+/* Styling for the game board and cards */
+
+#game_area {
+    width: 70vw;
+    height: 70vh;
+    display: inline-flex;
+    flex-wrap: wrap;
+    vertical-align: top;
+}
+img {
+    width: 100%;
+    height: 120px;
+}
+.card {
+    display: inline-flex;
+    width: 16%;
+    height: 33%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.reveal .back {
+    display: none;
 }
